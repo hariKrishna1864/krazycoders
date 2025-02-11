@@ -718,6 +718,8 @@ main {
 }
 
 .custom-block-full:hover {
+  background-color: rgb(235, 251, 236);
+
   border-color: var(--primary-color);
 }
 
