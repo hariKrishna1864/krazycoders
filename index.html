@@ -29,214 +29,10 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
 
     <link href="css/templatemo-pod-talk.css" rel="stylesheet" />
-    <style>
-      /* @keyframes slides {
-        from {
-          transform: translateX(0);
-        }
-        to {
-          transform: translateX(-100%);
-        }
-      }
-
-      .logos {
-        overflow: hidden;
-        padding: 30px 0px;
-        white-space: nowrap;
-        position: relative;
-      }
-
-      .logos:before,
-      .logos:after {
-        position: absolute;
-        top: 0;
-        content: "";
-        width: 250px;
-        height: 100%;
-        z-index: 2;
-      }
-
-      .logos:before {
-        left: 0;
-        background: linear-gradient(
-          to left,
-          rgba(255, 255, 255, 0),
-          rgb(4, 1, 1)
-        );
-      }
-
-      .logos:after {
-        right: 0;
-        background: linear-gradient(
-          to right,
-          rgba(255, 255, 255, 0),
-          rgb(4, 1, 1)
-        );
-      }
-
-      .logo_items {
-        display: inline-block;
-        animation: 35s slides infinite linear;
-      }
-
-      .logos:hover .logo_items {
-        animation-play-state: paused;
-      }
-
-      .logo_items img {
-        height: 80px;
-      } */
-      @keyframes slide {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-50%);
-        }
-      }
-
-      .logos {
-        overflow: hidden;
-        padding: 15px 0;
-        white-space: nowrap;
-        position: relative;
-        background-color: transparent;
-      }
-
-      .logo_items {
-        display: flex;
-        animation: 20s slide linear infinite;
-      }
-
-      .logos:nth-child(2) .logo_items {
-        animation-delay: -8s; /* Offset the animation for the second row */
-      }
-
-      .logo_items img {
-        height: 70px;
-        margin-right: 10px;
-        border-radius: 10px;
-      }
-
-      .logos:before,
-      .logos:after {
-        position: absolute;
-        top: 0;
-        width: 100px;
-        height: 100%;
-        content: "";
-        z-index: 2;
-      }
-
-      .logos:before {
-        left: 0;
-        background: linear-gradient(
-          to left,
-          rgba(255, 255, 255, 0),
-          rgb(4, 1, 1)
-        );
-      }
-
-      .logos:after {
-        right: 0;
-        background: linear-gradient(
-          to right,
-          rgba(255, 255, 255, 0),
-          rgb(4, 1, 1)
-        );
-      }
-
-      #fluid {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100dvw;
-        height: 100dvh;
-      }
-      body {
-        background-color: #000;
-        /* width: 100dvw;
-        height: 200dvh; */
-        /* overflow: hidden; */
-      }
-      .card-hover {
-        position: relative;
-        overflow: hidden;
-        width: 360px;
-        height: 500px;
-        box-shadow: 0 0 32px -10px rgba(0, 0, 0, 0.08);
-        border-radius: 20px;
-      }
-      .card-hover img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        transform: scale(1.2);
-        transition: transform 0.35s ease-in-out;
-      }
-      .card-hover:hover img {
-        transform: scale(1);
-      }
-      .card-hover .card-hover-content {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
-        background-color: #86b971;
-        padding: 50px 60px;
-        transform: translateY(0);
-        transition: all 0.35s ease-in-out;
-        z-index: 2;
-        border-radius: 50% 50% 0 0;
-      }
-      .card-hover:hover .card-hover-content {
-        background-color: #dee8c2;
-        transform: translateY(-100%);
-      }
-      .card-hover .card-hover-extra {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        background-color: #86b971;
-        text-align: center;
-        padding: 80px;
-        color: #dee8c2;
-        font-size: 1.5rem;
-        transform: translateY(100%);
-        transition: transform 0.35s ease-in-out;
-        z-index: 1;
-        border-radius: 50% 50% 0 0;
-      }
-      .card-hover:hover .card-hover-extra {
-        transform: translateY(0);
-      }
-      .card-hover .card-hover-link {
-        text-decoration: none;
-        color: #2d7f0b;
-        font-weight: bold;
-        display: inline-flex;
-        align-items: center;
-        transition: transform 0.3s ease-in-out;
-      }
-      .card-hover .card-hover-link svg {
-        width: 18px;
-        margin-left: 4px;
-        transition: transform 0.3s ease-in-out;
-      }
-      .card-hover .card-hover-link:hover svg {
-        transform: translateX(4px);
-      }
-    </style>
+    <link rel="stylesheet" href="css/new.css">
+   
+    
     <script src="./js/curser.js"></script>
-
-    <!--
-
-TemplateMo 584 Pod Talk
-
-https://templatemo.com/tm-584-pod-talk
-
--->
   </head>
 
   <body>
@@ -251,28 +47,6 @@ https://templatemo.com/tm-584-pod-talk
               alt="templatemo pod talk"
             />
           </a>
-
-          <!-- <form
-            action="#"
-            method="get"
-            class="custom-form search-form flex-fill me-3"
-            role="search"
-          >
-            <div class="input-group input-group-lg">
-              <input
-                name="search"
-                type="search"
-                class="form-control"
-                id="search"
-                placeholder="Search Podcast"
-                aria-label="Search"
-              />
-
-              <button type="submit" class="form-control" id="submit">
-                <i class="bi-search"></i>
-              </button>
-            </div>
-          </form> -->
 
           <button
             class="navbar-toggler"
@@ -329,14 +103,6 @@ https://templatemo.com/tm-584-pod-talk
                 <a class="nav-link" href="contact.html">Contact</a>
               </li>
             </ul>
-
-            <!-- <div class="ms-4">
-              <a
-                href="#section_3"
-                class="btn custom-btn custom-border-btn smoothscroll"
-                >Get started</a
-              >
-            </div> -->
           </div>
         </div>
       </nav>
@@ -372,11 +138,7 @@ https://templatemo.com/tm-584-pod-talk
                   />
 
                   <div class="owl-carousel-info">
-                    <h4 class="mb-2">webapp</h4>
-
-                    <span class="badge">Storytelling</span>
-
-                    <span class="badge">Business</span>
+                    <h4 class="mb-2 text-capitalize">webapp</h4>
                   </div>
                 </div>
 
@@ -388,11 +150,7 @@ https://templatemo.com/tm-584-pod-talk
                   />
 
                   <div class="owl-carousel-info">
-                    <h4 class="mb-2">website design</h4>
-
-                    <span class="badge">Creative</span>
-
-                    <span class="badge">Design</span>
+                    <h4 class="mb-2 text-capitalize">website design</h4>
                   </div>
                 </div>
 
@@ -404,11 +162,7 @@ https://templatemo.com/tm-584-pod-talk
                   />
 
                   <div class="owl-carousel-info">
-                    <h4 class="mb-2">google ads</h4>
-
-                    <span class="badge">Modeling</span>
-
-                    <span class="badge">Fashion</span>
+                    <h4 class="mb-2 text-capitalize">google ads</h4>
                   </div>
                 </div>
 
@@ -420,9 +174,7 @@ https://templatemo.com/tm-584-pod-talk
                   />
 
                   <div class="owl-carousel-info">
-                    <h4 class="mb-2">seo</h4>
-
-                    <span class="badge">Acting</span>
+                    <h4 class="mb-2 text-uppercase">seo</h4>
                   </div>
                 </div>
 
@@ -434,9 +186,7 @@ https://templatemo.com/tm-584-pod-talk
                   />
 
                   <div class="owl-carousel-info">
-                    <h4 class="mb-2">whats app marketing</h4>
-
-                    <span class="badge">Influencer</span>
+                    <h4 class="mb-2 text-capitalize">whats app marketing</h4>
                   </div>
                 </div>
 
@@ -448,9 +198,7 @@ https://templatemo.com/tm-584-pod-talk
                   />
 
                   <div class="owl-carousel-info">
-                    <h4 class="mb-2">social media marketing</h4>
-
-                    <span class="badge">Education</span>
+                    <h4 class="mb-2 text-capitalize">Social media marketing</h4>
                   </div>
                 </div>
               </div>
@@ -582,150 +330,162 @@ https://templatemo.com/tm-584-pod-talk
         class="latest-podcast-section section-padding pb-0"
         id="section_2"
       >
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-12 col-12">
-              <div class="section-title-wrap mb-5">
-                <h4 class="section-title">what we offer</h4>
-              </div>
-            </div>
+        
 
             <div class="container">
-              <h2 class="text-white mb-3">
-                Best Digital Marketing Agency in kadapa
-              </h2>
-
-              <p class="text-white py-2">
-                The One-stop Solution for All Your Online Marketing Needs
-              </p>
-            </div>
-
-            <div class="col-lg-4 col-sm-6 col-12 mb-4 mb-lg-5">
-              <div class="custom-block custom-block-full">
-                <div class="custom-block-image-wrap">
-                  <a href="detail-page.html">
-                    <img
-                      src="images/podcast/social-media-marketing-strategy.png"
-                      class="custom-block-image img-fluid"
-                      alt=""
-                    />
-                  </a>
+              <div class="row justify-content-center">
+                <div class="col-lg-12 col-12">
+                  <div class="section-title-wrap mb-5">
+                    <h4 class="section-title">What We Offer</h4>
+                  </div>
                 </div>
-
-                <div class="custom-block-info">
-                  <h5 class="mb-2">
-                    <a href="detail-page.html"> Social Media Marketing </a>
-                  </h5>
-
-                  <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+            
+                <!-- Header Content -->
+                <div class="col-12">
+                  <div class="container">
+                    <h2 class="text-white mb-3">Best Digital Marketing Agency in Kadapa</h2>
+                    <p class="text-white py-2">The One-stop Solution for All Your Online Marketing Needs</p>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 col-12 mb-4 mb-lg-5">
-              <div class="custom-block custom-block-full">
-                <div class="custom-block-image-wrap">
-                  <a href="detail-page.html">
-                    <img
-                      src="images/podcast/custom-web-app-development.png"
-                      class="custom-block-image img-fluid"
-                      alt=""
-                    />
-                  </a>
+            
+                <!-- Services Grid -->
+                <!-- Social Media Marketing -->
+                <div class="col-lg-4 col-sm-6 col-12 mb-4 mb-lg-5">
+                  <div class="custom-block custom-block-full">
+                    <div class="custom-block-image-wrap">
+                      <a href="detail-page.html">
+                        <img src="images/podcast/social-media-marketing-strategy.png" 
+                             class="custom-block-image img-fluid" 
+                             alt="Social Media Marketing">
+                      </a>
+                    </div>
+                    <div class="custom-block-info">
+                      <h5 class="mb-2">
+                        <a href="detail-page.html">Social Media Marketing</a>
+                      </h5>
+                      <p class="mb-0">Increase visibility and sales via strategic social campaigns.</p>
+                    </div>
+                  </div>
                 </div>
-
-                <div class="custom-block-info">
-                  <h5 class="mb-2">
-                    <a href="detail-page.html"> Web App Development </a>
-                  </h5>
-
-                  <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+            
+                <!-- Web App Development -->
+                <div class="col-lg-4 col-sm-6 col-12 mb-4 mb-lg-5">
+                  <div class="custom-block custom-block-full">
+                    <div class="custom-block-image-wrap">
+                      <a href="detail-page.html">
+                        <img
+                          src="images/podcast/custom-web-app-development.png"
+                          class="custom-block-image img-fluid"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+    
+                    <div class="custom-block-info">
+                      <h5 class="mb-2">  
+                        <a href="detail-page.html">Web App Development</a>  
+                      </h5>  
+                      
+                      <p class="mb-0">Build custom web applications tailored to your business needs, enhancing user experience and driving growth.</p>  
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 col-12 mb-4 mb-lg-5">
-              <div class="custom-block custom-block-full">
-                <div class="custom-block-image-wrap">
-                  <a href="detail-page.html">
-                    <img
-                      src="images/podcast/responsive-website-design.png"
-                      class="custom-block-image img-fluid"
-                      alt=""
-                    />
-                  </a>
+            
+                <!-- Web Design -->
+                <div class="col-lg-4 col-sm-6 col-12 mb-4 mb-lg-5">
+                  <div class="custom-block custom-block-full">
+                    <div class="custom-block-image-wrap">
+                      <a href="detail-page.html">
+                        <img
+                          src="images/podcast/responsive-website-design.png"
+                          class="custom-block-image img-fluid"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+    
+                    <div class="custom-block-info">
+                      <h5 class="mb-2">  
+                        <a href="detail-page.html">Web Design</a>  
+                      </h5>  
+                      
+                      <p class="mb-0">Craft responsive, user-centric websites that drive engagement and elevate your online presence.</p>  
+                    </div>
+                  </div>
                 </div>
-
-                <div class="custom-block-info">
-                  <h5 class="mb-2">
-                    <a href="detail-page.html"> Webdesing </a>
-                  </h5>
-
-                  <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+            
+                <!-- Google Ads -->
+                <div class="col-lg-4 col-sm-6 col-12 mb-4 mb-lg-0">
+                  <div class="custom-block custom-block-full">
+                    <div class="custom-block-image-wrap">
+                      <a href="detail-page.html">
+                        <img
+                          src="images/podcast\/google-ads-paid-advertising.png"
+                          class="custom-block-image img-fluid"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+    
+                    <div class="custom-block-info">
+                      <h5 class="mb-2">
+                        <a href="detail-page.html">Google Ads</a>
+                      </h5>
+                      
+                      <p class="mb-0">Drive targeted traffic and maximize ROI with strategic PPC campaigns tailored to your audience.</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 col-12 mb-4 mb-lg-0">
-              <div class="custom-block custom-block-full">
-                <div class="custom-block-image-wrap">
-                  <a href="detail-page.html">
-                    <img
-                      src="images/podcast\/google-ads-paid-advertising.png"
-                      class="custom-block-image img-fluid"
-                      alt=""
-                    />
-                  </a>
+            
+                <!-- SEO -->
+                <div class="col-lg-4 col-sm-6 col-12 mb-4 mb-lg-0">
+                  <div class="custom-block custom-block-full">
+                    <div class="custom-block-image-wrap">
+                      <a href="detail-page.html">
+                        <img
+                          src="images/podcast/seo-services-digital-marketing.png"
+                          class="custom-block-image img-fluid"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+    
+                    <div class="custom-block-info">
+                      <h5 class="mb-2">
+                        <a href="detail-page.html">SEO</a>
+                      </h5>
+                      
+                      <p class="mb-0">Boost organic traffic and improve search rankings with data-driven SEO strategies for long-term visibility.</p>
+                    </div>
+                  </div>
                 </div>
-
-                <div class="custom-block-info">
-                  <h5 class="mb-2">
-                    <a href="detail-page.html"> Google Ads </a>
-                  </h5>
-
-                  <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+            
+                <!-- WhatsApp Marketing -->
+                <div class="col-lg-4 col-sm-6 col-12 mb-4 mb-lg-0">
+                  <div class="custom-block custom-block-full">
+                    <div class="custom-block-image-wrap">
+                      <a href="detail-page.html">
+                        <img
+                          src="images/podcast/vwhatsapp-marketing-business.png"
+                          class="custom-block-image img-fluid"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+    
+                    <div class="custom-block-info">
+                      <h5 class="mb-2">
+                        <a href="detail-page.html">WhatsApp Marketing</a>
+                      </h5>
+                      
+                      <p class="mb-0">Drive direct engagement and boost sales with personalized WhatsApp campaigns.</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 col-12 mb-4 mb-lg-0">
-              <div class="custom-block custom-block-full">
-                <div class="custom-block-image-wrap">
-                  <a href="detail-page.html">
-                    <img
-                      src="images/podcast/seo-services-digital-marketing.png"
-                      class="custom-block-image img-fluid"
-                      alt=""
-                    />
-                  </a>
-                </div>
+              </div> <!-- Closing main row -->
+            </div> <!-- Closing container -->
 
-                <div class="custom-block-info">
-                  <h5 class="mb-2">
-                    <a href="detail-page.html"> SEO </a>
-                  </h5>
-
-                  <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 col-12 mb-4 mb-lg-0">
-              <div class="custom-block custom-block-full">
-                <div class="custom-block-image-wrap">
-                  <a href="detail-page.html">
-                    <img
-                      src="images/podcast/vwhatsapp-marketing-business.png"
-                      class="custom-block-image img-fluid"
-                      alt=""
-                    />
-                  </a>
-                </div>
-
-                <div class="custom-block-info">
-                  <h5 class="mb-2">
-                    <a href="detail-page.html"> WhatsApp Marketing </a>
-                  </h5>
-
-                  <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </section>
@@ -895,209 +655,9 @@ https://templatemo.com/tm-584-pod-talk
           </div>
         </div>
       </section>
-
-      <section class="trending-podcast-section section-padding">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 col-12">
-              <div class="section-title-wrap mb-5">
-                <h4 class="section-title">Trending episodes</h4>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-12 mb-4 mb-lg-0">
-              <div class="custom-block custom-block-full">
-                <div class="custom-block-image-wrap">
-                  <a href="detail-page.html">
-                    <img
-                      src="images/podcast/27376480_7326766.jpg"
-                      class="custom-block-image img-fluid"
-                      alt=""
-                    />
-                  </a>
-                </div>
-
-                <div class="custom-block-info">
-                  <h5 class="mb-2">
-                    <a href="detail-page.html"> Vintage Show </a>
-                  </h5>
-
-                  <div class="profile-block d-flex">
-                    <img
-                      src="images/profile/woman-posing-black-dress-medium-shot.jpg"
-                      class="profile-block-image img-fluid"
-                      alt=""
-                    />
-
-                    <p>Elsa <strong>Influencer</strong></p>
-                  </div>
-
-                  <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-
-                  <div
-                    class="custom-block-bottom d-flex justify-content-between mt-3"
-                  >
-                    <a href="#" class="bi-headphones me-1">
-                      <span>100k</span>
-                    </a>
-
-                    <a href="#" class="bi-heart me-1">
-                      <span>2.5k</span>
-                    </a>
-
-                    <a href="#" class="bi-chat me-1">
-                      <span>924k</span>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="social-share d-flex flex-column ms-auto">
-                  <a href="#" class="badge ms-auto">
-                    <i class="bi-heart"></i>
-                  </a>
-
-                  <a href="#" class="badge ms-auto">
-                    <i class="bi-bookmark"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-12 mb-4 mb-lg-0">
-              <div class="custom-block custom-block-full">
-                <div class="custom-block-image-wrap">
-                  <a href="detail-page.html">
-                    <img
-                      src="images/podcast/27670664_7369753.jpg"
-                      class="custom-block-image img-fluid"
-                      alt=""
-                    />
-                  </a>
-                </div>
-
-                <div class="custom-block-info">
-                  <h5 class="mb-2">
-                    <a href="detail-page.html"> Vintage Show </a>
-                  </h5>
-
-                  <div class="profile-block d-flex">
-                    <img
-                      src="images/profile/cute-smiling-woman-outdoor-portrait.jpg"
-                      class="profile-block-image img-fluid"
-                      alt=""
-                    />
-
-                    <p>
-                      Taylor
-                      <img
-                        src="images/verified.png"
-                        class="verified-image img-fluid"
-                        alt=""
-                      />
-                      <strong>Creator</strong>
-                    </p>
-                  </div>
-
-                  <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-
-                  <div
-                    class="custom-block-bottom d-flex justify-content-between mt-3"
-                  >
-                    <a href="#" class="bi-headphones me-1">
-                      <span>100k</span>
-                    </a>
-
-                    <a href="#" class="bi-heart me-1">
-                      <span>2.5k</span>
-                    </a>
-
-                    <a href="#" class="bi-chat me-1">
-                      <span>924k</span>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="social-share d-flex flex-column ms-auto">
-                  <a href="#" class="badge ms-auto">
-                    <i class="bi-heart"></i>
-                  </a>
-
-                  <a href="#" class="badge ms-auto">
-                    <i class="bi-bookmark"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-12">
-              <div class="custom-block custom-block-full">
-                <div class="custom-block-image-wrap">
-                  <a href="detail-page.html">
-                    <img
-                      src="images/podcast/12577967_02.jpg"
-                      class="custom-block-image img-fluid"
-                      alt=""
-                    />
-                  </a>
-                </div>
-
-                <div class="custom-block-info">
-                  <h5 class="mb-2">
-                    <a href="detail-page.html"> Daily Talk </a>
-                  </h5>
-
-                  <div class="profile-block d-flex">
-                    <img
-                      src="images/profile/handsome-asian-man-listening-music-through-headphones.jpg"
-                      class="profile-block-image img-fluid"
-                      alt=""
-                    />
-
-                    <p>
-                      William
-                      <img
-                        src="images/verified.png"
-                        class="verified-image img-fluid"
-                        alt=""
-                      />
-                      <strong>Vlogger</strong>
-                    </p>
-                  </div>
-
-                  <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-
-                  <div
-                    class="custom-block-bottom d-flex justify-content-between mt-3"
-                  >
-                    <a href="#" class="bi-headphones me-1">
-                      <span>100k</span>
-                    </a>
-
-                    <a href="#" class="bi-heart me-1">
-                      <span>2.5k</span>
-                    </a>
-
-                    <a href="#" class="bi-chat me-1">
-                      <span>924k</span>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="social-share d-flex flex-column ms-auto">
-                  <a href="#" class="badge ms-auto">
-                    <i class="bi-heart"></i>
-                  </a>
-
-                  <a href="#" class="badge ms-auto">
-                    <i class="bi-bookmark"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
+
+   
 
     <footer class="site-footer">
       <div class="container">
