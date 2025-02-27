@@ -17,7 +17,7 @@ https://templatemo.com/tm-584-pod-talk
   --custom-btn-bg-color: #0066cc;
   --custom-btn-bg-hover-color: #00cc99;
   --dark-color: #000000;
-  --p-color: #717275;
+  --p-color: #d0d9f8;
   --border-color: #7fffd4;
   --link-hover-color: #0066cc;
 
@@ -45,7 +45,7 @@ https://templatemo.com/tm-584-pod-talk
 }
 
 body {
-  background-color: var(--white-color);
+  /* background-color: var(--white-color); */
   font-family: var(--body-font-family);
 }
 
@@ -55,9 +55,11 @@ body {
 
 h2,
 h3,
-h4,
 h5,
 h6 {
+  color: var(--white-color);
+}
+h4 {
   color: var(--dark-color);
 }
 
@@ -67,7 +69,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--title-font-family);
+  /* font-family: var(--title-font-family); */
+  font-family: "Cardo", serif;
   font-weight: var(--font-weight-semibold);
 }
 
@@ -100,7 +103,7 @@ h6 {
 p {
   color: var(--p-color);
   font-size: var(--p-font-size);
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-medium);
 }
 
 ul li {
@@ -166,6 +169,10 @@ strong {
 
 .section-padding {
   padding-top: 100px;
+  padding-bottom: 100px;
+}
+.section-paddingg {
+  padding-top: 10px;
   padding-bottom: 100px;
 }
 
@@ -361,7 +368,7 @@ main {
 
 .navbar .dropdown-item {
   display: inline-block;
-  color: var(--p-bg-color);
+  color: rgb(21, 17, 17);
   font-family: var(--title-font-family);
   font-size: var(--menu-font-size);
   font-weight: var(--font-weight-medium);
@@ -491,7 +498,7 @@ main {
   background-repeat: no-repeat;
   background-size: 108% 76%;
   background-position: top;
-  padding-top: 200px;
+  padding-top: 120px;
 }
 
 .owl-carousel {
@@ -743,6 +750,10 @@ main {
 .custom-block-full .custom-block-info {
   padding: 20px;
   padding-bottom: 0;
+}
+
+.custom-block-info p {
+  color: #000000;
 }
 
 .custom-block-full .custom-block-image {
@@ -1011,7 +1022,7 @@ main {
 /*---------------------------------------
   SITE FOOTER              
 -----------------------------------------*/
-.site-footer {
+/* .site-footer {
   background-image: url("../images/templatemo-wave-footer.jpg"),
     linear-gradient(#ffffff, #348cd2);
   background-repeat: no-repeat;
@@ -1070,7 +1081,7 @@ main {
   color: var(--white-color);
   font-size: var(--p-font-size);
   line-height: inherit;
-}
+} */
 
 /*---------------------------------------
   SOCIAL ICON               
@@ -1162,6 +1173,10 @@ main {
     padding-top: 50px;
     padding-bottom: 50px;
   }
+  .section-paddingg {
+    padding-top: 10px;
+    padding-bottom: 50px;
+  }
 
   .navbar-nav {
     background-color: var(--primary-color);
@@ -1178,7 +1193,7 @@ main {
     left: 10px;
     opacity: 1;
     pointer-events: auto;
-    max-width: 155px;
+    max-width: 269px;
     margin-top: 10px;
     margin-bottom: 15px;
   }
@@ -1249,4 +1264,26 @@ main {
   .search-form {
     max-width: 200px;
   }
+}
+
+/* Global Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+  /* border: 1px solid #cacaca; */
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+/* Firefox Support */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #d55959 #e7e7e7;
 }

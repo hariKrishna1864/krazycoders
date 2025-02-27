@@ -1,0 +1,508 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stunning Text Animation</title>
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Playfair Display", serif;
+        background: radial-gradient(circle at center, #1c1c1c, #0d0d0d);
+        color: #fff;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .text-container {
+        perspective: 2000px;
+        text-align: center;
+        z-index: 10;
+      }
+
+      .text-box {
+        font-size: 3em;
+        text-transform: uppercase;
+        color: transparent;
+        position: relative;
+        display: inline-block;
+        margin: 20px;
+        opacity: 0;
+        transform: translateY(100px) rotateX(90deg);
+        background: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0);
+        background-clip: text;
+        -webkit-background-clip: text;
+        filter: drop-shadow(0 5px 15px rgba(255, 0, 128, 0.6));
+        transition: transform 0.3s;
+      }
+
+      .text-box:hover {
+        transform: scale(1.05) translateZ(20px);
+        filter: drop-shadow(0 20px 30px rgba(255, 0, 128, 0.8));
+      }
+
+      .text-box::before,
+      .text-box::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 120%;
+        height: 120%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 0, 128, 0.3),
+          transparent
+        );
+        border-radius: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 0.4s;
+        z-index: -1;
+      }
+
+      .text-box:hover::before {
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      .floating {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .text-box {
+          font-size: 2em;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .text-box {
+          font-size: 1.5em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text-container">
+      <div class="text-box floating">Hello, This is a block of text</div>
+      <div class="text-box floating">Hello, This is another block of text</div>
+      <div class="text-box floating">
+        Hello, This is yet another block of text
+      </div>
+      <div class="text-box floating">Hello, This is also a block of text</div>
+      <div class="text-box floating">Hello, This is the last block of text</div>
+    </div>
+
+    <script>
+      // GSAP Animation for Stunning 3D Effects
+      gsap.fromTo(
+        ".text-box",
+        {
+          opacity: 0,
+          y: 100,
+          rotationX: 90,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          rotationX: 0,
+          duration: 1.5,
+          ease: "expo.out",
+          stagger: {
+            amount: 1,
+            from: "center",
+          },
+        }
+      );
+
+      // Parallax Effect on Mouse Move
+      document.addEventListener("mousemove", (e) => {
+        const x = (e.clientX / window.innerWidth - 0.5) * 40;
+        const y = (e.clientY / window.innerHeight - 0.5) * 40;
+        gsap.to(".text-container", {
+          rotationY: x,
+          rotationX: -y,
+          transformPerspective: 2000,
+          ease: "power1.out",
+        });
+      });
+    </script>
+  </body>
+</html> -->
+
+<!-- 2nd design -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mesmerizing Text Animation</title>
+  
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: radial-gradient(circle, #1e1e1e, #0d0d0d);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #fff;
+      }
+
+      .text-container {
+        perspective: 1000px;
+        text-align: center;
+        z-index: 10;
+      }
+
+      .text-box {
+        font-size: 4em;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        position: relative;
+        display: inline-block;
+        margin: 20px;
+        opacity: 0;
+        transform: translateY(100px) scale(0.8);
+        color: transparent;
+        background: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0);
+        background-clip: text;
+        -webkit-background-clip: text;
+        transition: transform 0.5s;
+      }
+
+      .text-box::before {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        color: rgba(255, 255, 255, 0.1);
+        filter: blur(15px);
+        transform: scale(1.1);
+        z-index: -1;
+      }
+
+      .text-box:hover {
+        transform: scale(1.05);
+      }
+
+      .particles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+      }
+
+      .particle {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 1),
+          rgba(255, 255, 255, 0)
+        );
+        pointer-events: none;
+      }
+
+      @media (max-width: 768px) {
+        .text-box {
+          font-size: 2.5em;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .text-box {
+          font-size: 1.8em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text-container">
+      <div class="text-box" data-text="Hello, This is a block of text">
+        Hello, This is a block of text
+      </div>
+      <div class="text-box" data-text="Another block of text">
+        Another block of text
+      </div>
+      <div class="text-box" data-text="Yet another block of text">
+        Yet another block of text
+      </div>
+      <div class="text-box" data-text="This is also a block">
+        This is also a block
+      </div>
+      <div class="text-box" data-text="The last block of text">
+        The last block of text
+      </div>
+    </div>
+
+    <div class="particles"></div>
+
+    <script>
+      // GSAP Animation for Text Reveal
+      gsap.fromTo(
+        ".text-box",
+        {
+          opacity: 0,
+          y: 100,
+          scale: 0.8,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 1.5,
+          ease: "power4.out",
+          stagger: {
+            amount: 1,
+            from: "center",
+          },
+        }
+      );
+
+      // Particle Animation
+      const particleCount = 30;
+      const particles = document.querySelector(".particles");
+
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement("div");
+        particle.classList.add("particle");
+        particle.style.width = particle.style.height = `${
+          Math.random() * 8 + 4
+        }px`;
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.top = `${Math.random() * 100}%`;
+        particles.appendChild(particle);
+
+        gsap.fromTo(
+          particle,
+          {
+            opacity: 0,
+            y: -20,
+            scale: 0,
+          },
+          {
+            opacity: 1,
+            y: "+=40",
+            scale: 1,
+            repeat: -1,
+            yoyo: true,
+            duration: Math.random() * 2 + 2,
+            ease: "power1.inOut",
+            delay: Math.random() * 2,
+          }
+        );
+      }
+    </script>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Text Animation</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        font-family: "Arial", sans-serif;
+        overflow-x: hidden;
+        background: #000;
+      }
+
+      .text-container {
+        position: relative;
+        width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .text-block {
+        position: absolute;
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: center;
+        padding: 1rem 2rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        transform-origin: center;
+        opacity: 0;
+      }
+
+      @media (max-width: 768px) {
+        .text-block {
+          font-size: 1.5rem;
+          padding: 0.8rem 1.5rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .text-block {
+          font-size: 1.2rem;
+          padding: 0.5rem 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text-container">
+      <div class="text-block" data-position="1">This is Block One</div>
+      <div class="text-block" data-position="2">This is Block Two</div>
+      <div class="text-block" data-position="3">This is Block Three</div>
+      <div class="text-block" data-position="4">This is Block Four</div>
+      <div class="text-block" data-position="5">This is Block Five</div>
+    </div>
+
+    <!-- Scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+ObplNFqoRfbakWQMIf4A9l9dWTdWmVCrOA=="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (typeof gsap === "undefined") {
+          console.error("GSAP failed to load");
+          return;
+        }
+
+        // Define positions for each block
+        const positions = {
+          1: { x: "20vw", y: "20vh" },
+          2: { x: "70vw", y: "25vh" },
+          3: { x: "45vw", y: "50vh" },
+          4: { x: "25vw", y: "75vh" },
+          5: { x: "65vw", y: "70vh" },
+        };
+
+        // Set initial positions and states
+        document.querySelectorAll(".text-block").forEach((block, index) => {
+          const pos = positions[block.dataset.position];
+          gsap.set(block, {
+            x: pos.x,
+            y: pos.y,
+            opacity: 0,
+            scale: 0.5,
+            filter: "blur(8px)",
+          });
+        });
+
+        // Create animation timeline
+        const tl = gsap.timeline({
+          defaults: { ease: "power3.out", duration: 1.5 },
+          repeat: -1,
+          repeatDelay: 0.5,
+        });
+
+        document.querySelectorAll(".text-block").forEach((block, index) => {
+          tl.to(
+            block,
+            {
+              opacity: 1,
+              scale: 1,
+              filter: "blur(0px)",
+              duration: 1.5,
+            },
+            index * 1.5
+          ) // Stagger by 1.5 seconds
+            .to(
+              block,
+              {
+                opacity: 0,
+                scale: 1.2,
+                filter: "blur(8px)",
+                duration: 1,
+              },
+              "+=2"
+            ); // Hold for 2 seconds before fading out
+        });
+
+        // Add hover interactivity (optional)
+        document.querySelectorAll(".text-block").forEach((block) => {
+          block.addEventListener("mouseenter", () => {
+            if (block.style.opacity === "1") {
+              gsap.to(block, {
+                scale: 1.1,
+                duration: 0.3,
+                ease: "power2.out",
+              });
+            }
+          });
+          block.addEventListener("mouseleave", () => {
+            gsap.to(block, {
+              scale: 1,
+              duration: 0.3,
+              ease: "power2.out",
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
