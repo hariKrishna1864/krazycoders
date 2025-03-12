@@ -1279,11 +1279,11 @@ main {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 8px;
-  background-color: #ffffff;
+  background-color: #f91942;
 }
 
 /* Firefox Support */
 body {
   scrollbar-width: thin;
-  scrollbar-color: #d55959 #e7e7e7;
+  scrollbar-color: #f91942;
 }
