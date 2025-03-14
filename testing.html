@@ -1,393 +1,152 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stunning Text Animation</title>
-    
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
-      rel="stylesheet"
-    />
-   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+<head>
+  <!-- Primary Meta Tags: The Foundation of Thy Kingdom -->
+  <title>
+    🔥 Digital Marketing Course in Kadapa | Certified SEO, Google Ads & Social
+    Media Training - KrazyCoders
+  </title>
+  <meta
+    name="description"
+    content="Become a Google & Meta-Certified Digital Marketer in 3 Months! Join KrazyCoders' #1 Course in Kadapa. Master SEO, Facebook Ads & Analytics. 100% Placement Support. Batch Starts Soon!"
+  />
+  <meta name="author" content="KrazyCoders" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
 
-      body {
-        font-family: "Playfair Display", serif;
-        background: radial-gradient(circle at center, #1c1c1c, #0d0d0d);
-        color: #fff;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
+  <!-- Open Graph: For the Social Media Overlords -->
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:url"
+    content="https://krazycoders.com/digital-marketing-course-kadapa"
+  />
+  <meta
+    property="og:title"
+    content="Digital Marketing Course in Kadapa | SEO & Google Ads Certification - KrazyCoders"
+  />
+  <meta
+    property="og:description"
+    content="Andhra Pradesh’s Top-Rated Digital Marketing Course! 3-Month Training with Live Projects. Join KrazyCoders in Kadapa & Get Hired."
+  />
+  <meta
+    property="og:image"
+    content="https://krazycoders.com/images/og/digital-marketing-course-kadapa-1200x630.jpg"
+  />
+  <meta
+    property="og:image:alt"
+    content="Students learning digital marketing at KrazyCoders Kadapa campus"
+  />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:site_name" content="KrazyCoders" />
 
-      .text-container {
-        perspective: 2000px;
-        text-align: center;
-        z-index: 10;
-      }
+  <!-- Twitter Card: For the Hashtag Warriors -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@KrazyCoders" />
+  <meta name="twitter:creator" content="@KrazyCoders" />
+  <meta
+    name="twitter:title"
+    content="Digital Marketing Course in Kadapa | SEO & Google Ads Certification - KrazyCoders"
+  />
+  <meta
+    name="twitter:description"
+    content="🚀 3-Month Guaranteed Placement Program! Master SEO, Facebook Ads & Analytics. Join KrazyCoders’ Kadapa Batch Today."
+  />
+  <meta
+    name="twitter:image"
+    content="https://krazycoders.com/images/twitter/digital-marketing-course-kadapa-card.jpg"
+  />
 
-      .text-box {
-        font-size: 3em;
-        text-transform: uppercase;
-        color: transparent;
-        position: relative;
-        display: inline-block;
-        margin: 20px;
-        opacity: 0;
-        transform: translateY(100px) rotateX(90deg);
-        background: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0);
-        background-clip: text;
-        -webkit-background-clip: text;
-        filter: drop-shadow(0 5px 15px rgba(255, 0, 128, 0.6));
-        transition: transform 0.3s;
-      }
+  <!-- Canonical: Thou Shalt Not Duplicate! -->
+  <link
+    rel="canonical"
+    href="https://krazycoders.com/digital-marketing-course-kadapa"
+  />
 
-      .text-box:hover {
-        transform: scale(1.05) translateZ(20px);
-        filter: drop-shadow(0 20px 30px rgba(255, 0, 128, 0.8));
-      }
-
-      .text-box::before,
-      .text-box::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 120%;
-        height: 120%;
-        background: radial-gradient(
-          circle,
-          rgba(255, 0, 128, 0.3),
-          transparent
-        );
-        border-radius: 50%;
-        transform: translate(-50%, -50%) scale(0);
-        transition: transform 0.4s;
-        z-index: -1;
-      }
-
-      .text-box:hover::before {
-        transform: translate(-50%, -50%) scale(1);
-      }
-
-      .floating {
-        animation: float 6s ease-in-out infinite;
-      }
-
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-20px);
-        }
-      }
-
-      @media (max-width: 768px) {
-        .text-box {
-          font-size: 2em;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .text-box {
-          font-size: 1.5em;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="text-container">
-      <div class="text-box floating">Hello, This is a block of text</div>
-      <div class="text-box floating">Hello, This is another block of text</div>
-      <div class="text-box floating">
-        Hello, This is yet another block of text
-      </div>
-      <div class="text-box floating">Hello, This is also a block of text</div>
-      <div class="text-box floating">Hello, This is the last block of text</div>
-    </div>
-
-    <script>
-      // GSAP Animation for Stunning 3D Effects
-      gsap.fromTo(
-        ".text-box",
-        {
-          opacity: 0,
-          y: 100,
-          rotationX: 90,
+  <!-- Structured Data: Bow to Google’s Algorithm -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Advanced Digital Marketing Certification",
+      "description": "3-month intensive training program covering SEO, Google Ads, Social Media Marketing & Analytics. Taught by industry experts in Kadapa, Andhra Pradesh.",
+      "image": "https://krazycoders.com/images/logo.png",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "KrazyCoders",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Digital Street",
+          "addressLocality": "Kadapa",
+          "addressRegion": "Andhra Pradesh",
+          "postalCode": "516001",
+          "addressCountry": "IN"
         },
-        {
-          opacity: 1,
-          y: 0,
-          rotationX: 0,
-          duration: 1.5,
-          ease: "expo.out",
-          stagger: {
-            amount: 1,
-            from: "center",
-          },
-        }
-      );
-
-      // Parallax Effect on Mouse Move
-      document.addEventListener("mousemove", (e) => {
-        const x = (e.clientX / window.innerWidth - 0.5) * 40;
-        const y = (e.clientY / window.innerHeight - 0.5) * 40;
-        gsap.to(".text-container", {
-          rotationY: x,
-          rotationX: -y,
-          transformPerspective: 2000,
-          ease: "power1.out",
-        });
-      });
-    </script>
-  </body>
-</html> -->
-
-<!-- 2nd design -->
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mesmerizing Text Animation</title>
-  
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
-      rel="stylesheet"
-    />
-   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: "Poppins", sans-serif;
-        background: radial-gradient(circle, #1e1e1e, #0d0d0d);
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        color: #fff;
-      }
-
-      .text-container {
-        perspective: 1000px;
-        text-align: center;
-        z-index: 10;
-      }
-
-      .text-box {
-        font-size: 4em;
-        text-transform: uppercase;
-        letter-spacing: 4px;
-        position: relative;
-        display: inline-block;
-        margin: 20px;
-        opacity: 0;
-        transform: translateY(100px) scale(0.8);
-        color: transparent;
-        background: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0);
-        background-clip: text;
-        -webkit-background-clip: text;
-        transition: transform 0.5s;
-      }
-
-      .text-box::before {
-        content: attr(data-text);
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        color: rgba(255, 255, 255, 0.1);
-        filter: blur(15px);
-        transform: scale(1.1);
-        z-index: -1;
-      }
-
-      .text-box:hover {
-        transform: scale(1.05);
-      }
-
-      .particles {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: 0;
-        overflow: hidden;
-      }
-
-      .particle {
-        position: absolute;
-        border-radius: 50%;
-        opacity: 0;
-        background: radial-gradient(
-          circle,
-          rgba(255, 255, 255, 1),
-          rgba(255, 255, 255, 0)
-        );
-        pointer-events: none;
-      }
-
-      @media (max-width: 768px) {
-        .text-box {
-          font-size: 2.5em;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .text-box {
-          font-size: 1.8em;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="text-container">
-      <div class="text-box" data-text="Hello, This is a block of text">
-        Hello, This is a block of text
-      </div>
-      <div class="text-box" data-text="Another block of text">
-        Another block of text
-      </div>
-      <div class="text-box" data-text="Yet another block of text">
-        Yet another block of text
-      </div>
-      <div class="text-box" data-text="This is also a block">
-        This is also a block
-      </div>
-      <div class="text-box" data-text="The last block of text">
-        The last block of text
-      </div>
-    </div>
-
-    <div class="particles"></div>
-
-    <script>
-      // GSAP Animation for Text Reveal
-      gsap.fromTo(
-        ".text-box",
-        {
-          opacity: 0,
-          y: 100,
-          scale: 0.8,
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "14.4753",
+          "longitude": "78.8295"
         },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: 1.5,
-          ease: "power4.out",
-          stagger: {
-            amount: 1,
-            from: "center",
-          },
+        "telephone": "+91-9876543210",
+        "priceRange": "₹25000",
+        "sameAs": [
+          "https://facebook.com/KrazyCoders",
+          "https://linkedin.com/company/KrazyCoders"
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "ratingCount": "287"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "price": "25000",
+        "url": "https://krazycoders.com/digital-marketing-course-kadapa",
+        "availability": "https://schema.org/InStock"
+      },
+      "coursePrerequisites": "Basic computer skills",
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": ["Online", "Offline"],
+        "duration": "P3M",
+        "courseSchedule": {
+          "@type": "Schedule",
+          "startDate": "2024-07-01",
+          "repeatFrequency": "P1W"
         }
-      );
-
-      // Particle Animation
-      const particleCount = 30;
-      const particles = document.querySelector(".particles");
-
-      for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement("div");
-        particle.classList.add("particle");
-        particle.style.width = particle.style.height = `${
-          Math.random() * 8 + 4
-        }px`;
-        particle.style.left = `${Math.random() * 100}%`;
-        particle.style.top = `${Math.random() * 100}%`;
-        particles.appendChild(particle);
-
-        gsap.fromTo(
-          particle,
-          {
-            opacity: 0,
-            y: -20,
-            scale: 0,
-          },
-          {
-            opacity: 1,
-            y: "+=40",
-            scale: 1,
-            repeat: -1,
-            yoyo: true,
-            duration: Math.random() * 2 + 2,
-            ease: "power1.inOut",
-            delay: Math.random() * 2,
-          }
-        );
       }
-    </script>
-  </body>
-</html> -->
+    }
+  </script>
 
-<title>
-  KrazyCoders: Digital Marketing Agency & Software Training in Kadapa
-</title>
+  <!-- Technical Majesty -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Content-Language" content="en" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-<meta
-  name="description"
-  content="Digital Shout is a leading digital marketing agency in Hyderabad that specializes in services like SEO, Social Media Marketing, Google Ads, and Website Designing."
-/>
-<link rel="canonical" href="https://digitalshout.in/" />
-<meta property="og:locale" content="en_GB" />
-<meta property="og:type" content="website" />
-<meta
-  property="og:title"
-  content="Digital Shout - Digital Marketing Agency in Hyderabad"
-/>
-<meta
-  property="og:description"
-  content="Digital Shout is one of the top Digital Marketing Company in Hyderabad. Digital Shout Agency Provides the SEO, Social Media, Google Ads PPC &amp;Web Design Services"
-/>
-<meta property="og:url" content="https://digitalshout.in/" />
-<meta property="og:site_name" content="Digital Shout" />
-<meta
-  property="article:publisher"
-  content="https://www.facebook.com/DigitalShout.in/"
-/>
-<meta property="article:modified_time" content="2024-08-23T13:15:56+00:00" />
-<meta
-  property="og:image"
-  content="https://digitalshout.in/wp-content/uploads/2020/02/DIGITAL-SHOUT-LOGO-feb-old-2-01-e1582203114846.png"
-/>
-<meta property="og:image:width" content="988" />
-<meta property="og:image:height" content="250" />
-<meta property="og:image:type" content="image/png" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta
-  name="twitter:title"
-  content="Digital Shout - Digital Marketing Agency in Hyderabad"
-/>
-<meta
-  name="twitter:description"
-  content="Digital Shout is one of the top Digital Marketing Company in Hyderabad. Digital Shout Agency Provides the SEO, Social Media, Google Ads PPC &amp;Web Design Services"
-/>
-<meta
-  name="twitter:image"
-  content="https://digitalshout.in/wp-content/uploads/2020/02/DIGITAL-SHOUT-LOGO-feb-old-2-01-e1582203114846.png"
-/>
-<meta name="twitter:site" content="@Digitalshout_in" />
+  <!-- Preloading: For the Impatient Serfs -->
+  <link
+    rel="preload"
+    href="https://krazycoders.com/fonts/poppins.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Thou Shalt Be Tracked (GA4) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-XXXXXXX");
+  </script>
+</head>
